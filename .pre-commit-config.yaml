@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: ${LATEST_SHA_OR_VERSION}
+    hooks:
+      - id: check-yaml
+      - id: check-ast
+      - id: detect-aws-credentials
+      - id: check-docstring-first
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: pretty-format-json
+  - repo: https://github.com/psf/black
+    rev: ${LATEST_SHA_OR_VERSION}
+    hooks:
+      - id: black
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: ${LATEST_SHA_OR_VERSION}
+    hooks:
+      - id: pretty-format-yaml
+        args: [--autofix, --indent, "2"]
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: ${LATEST_SHA_OR_VERSION}
+    hooks:
+      - id: pretty-format-yaml
+        args: [--autofix, --indent, "2"]
